@@ -2,9 +2,16 @@
   <head>
     <title>hCaptcha Demo</title>
     <script src="https://js.hcaptcha.com/1/api.js" type="text/javascript" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="appleid-signin-client-id" content="[CLIENT
+    <meta name="appleid-signin-scope" content="[SCOPES]">
+    <meta name="appleid-signin-redirect-uri" content="[RED]">
+    <meta name="appleid-signin-state" content="[STATE]">
+    <meta name="appleid-signin-nonce" content="[NONCE]">
+    <meta name="appleid-signin-use-popup" content="false">
   </head>
-  <body>
-      <script>const express = require('express');
+  <body style="background-color:black">
+    <script>const express = require('express');
 const Redis = require('ioredis');
 const app = express();
 
@@ -46,13 +53,19 @@ app.listen(3000, () => {
 });
 </script>
     <center>
-    <form action="" method="POST">
-      <input type="text" name="email" placeholder="Email" />
-      <input type="password" name="password" placeholder="Password" />
-      <div class="h-captcha" data-sitekey="4d788ef2-da48-42b4-8e6e-c09eceaec1b6" data-theme="dark"></div>
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
+<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+<div style="inline-size:30%" id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
+<meta name="google-signin-client_id" content="4182925335-jekgb9poejva537rjeesgcnlss4c5ucr.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<h2>Sign up</h2>
+<form action="" method="POST">
+  <input type="text" name="email" placeholder="Email" />
+  <br />
+  <input type="password" name="password" placeholder="Password" />
+  <div class="h-captcha" data-sitekey="4d788ef2-da48-42b4-8e6e-c09eceaec1b6" data-theme="dark"></div>
+  <br />
+  <input type="submit" value="Submit" />
+</form> 
   </center>
 
   </body>
