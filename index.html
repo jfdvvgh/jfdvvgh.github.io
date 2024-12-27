@@ -16,16 +16,7 @@
 <div style="inline-size:30%" id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
 <meta name="google-signin-client_id" content="4182925335-jekgb9poejva537rjeesgcnlss4c5ucr.apps.googleusercontent.com">
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
-<h2>Sign up</h2>
-<form action="" method="POST">
-  <input type="text" name="email" placeholder="Email" />
-  <br />
-  <input type="password" name="password" placeholder="Password" />
-  <div class="h-captcha" data-sitekey="4d788ef2-da48-42b4-8e6e-c09eceaec1b6" data-theme="dark"></div>
-  <br />
-  <input type="submit" value="Submit" />
-</form> 
-        <a href="#" id="linkedin-signin" onclick="authorizeLinkedIn()">
+   <a href="#" id="linkedin-signin" onclick="authorizeLinkedIn()">
         <img src="https://i.sstatic.net/mKpeu.png" alt="Sign in with LinkedIn" width="200">
     </a>
 
@@ -38,6 +29,15 @@
             window.location.href = authUrl;
         }
     </script>
+<h2>Sign up</h2>
+<form action="" method="POST">
+  <input type="text" name="email" placeholder="Email" />
+  <br />
+  <input type="password" name="password" placeholder="Password" />
+  <div class="h-captcha" data-sitekey="4d788ef2-da48-42b4-8e6e-c09eceaec1b6" data-theme="dark"></div>
+  <br />
+  <input type="submit" value="Submit" />
+</form> 
   </center>
 <script>function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
