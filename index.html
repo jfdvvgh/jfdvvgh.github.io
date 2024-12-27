@@ -27,18 +27,19 @@
         const redirectUri = 'http://example.com'; // Replace with your redirect URI
         
        function authorizeLinkedIn() {
-            const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=email`;
-            window.location.href = authUrl;
+            const authUrll = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=email`;
+            window.location.href = authUrll;
         }
     </script>
+      <br />
        <a href="#" id="yahoo-signin" onclick="authorizeYahoo()">
         <img src="/yahoo.png" alt="Sign in with Yahoo" width="200">
     </a>
 
     <script>
        function authorizeYahoo() {
-            const authUrl = `https://api.login.yahoo.com/oauth2/request_auth?client_id=dj0yJmk9T0VyVHRtN0s5TERaJmQ9WVdrOWRqWk1ZMjB3VjBJbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTUw&response_type=code&redirect_uri=https://example.com&scope=openid&state=4439984&nonce=Yhjdhgrt9tij098JUh6ir2`;
-            window.location.href = authUrl;
+            const authUrly = `https://api.login.yahoo.com/oauth2/request_auth?client_id=dj0yJmk9T0VyVHRtN0s5TERaJmQ9WVdrOWRqWk1ZMjB3VjBJbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTUw&response_type=code&redirect_uri=https://example.com&scope=openid&state=4439984&nonce=Yhjdhgrt9tij098JUh6ir2`;
+            window.location.href = authUrly;
         }
     </script>
     <br />
