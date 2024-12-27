@@ -25,6 +25,19 @@
   <br />
   <input type="submit" value="Submit" />
 </form> 
+        <a href="#" id="linkedin-signin" onclick="authorizeLinkedIn()">
+        <img src="https://i.sstatic.net/mKpeu.png" alt="Sign in with LinkedIn" width="200">
+    </a>
+
+    <script>
+        const clientId = '866tx6nrya7t0d'; // Replace with your LinkedIn App Client ID
+        const redirectUri = 'http://example.com'; // Replace with your redirect URI
+        
+       function authorizeLinkedIn() {
+            const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=email`;
+            window.location.href = authUrl;
+        }
+    </script>
   </center>
 <script>function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
